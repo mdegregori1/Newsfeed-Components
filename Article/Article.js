@@ -102,6 +102,7 @@ const data = [
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+  
 
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
@@ -112,3 +113,59 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+// Step 1 
+
+const articles  = document.querySelector('.articles');
+function createArticle(title,date,firstParagraph,secondParagraph, thirdParagraph){
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const articleP1 = document.createElement('p')
+  const articleP2 = document.createElement('p')
+  const articleP3 = document.createElement('p')
+  const articleButton= document.createElement('span');
+
+
+  // class names 
+article.classList.add('article');
+articleDate.classList.add('date');
+articleButton.classList.add('expandButton');
+
+//structure
+
+article.appendChild(articleTitle);
+article.appendChild(articleDate);
+article.appendChild(articleP1);
+article.appendChild(articleP2);
+article.appendChild(articleP3);
+article.appendChild(articleButton);
+
+
+// set text content
+
+articleTitle.textContent = title;
+articleDate.textContent = date;
+articleP1.textContent = firstParagraph;
+articleP2.textContent = secondParagraph;
+articleP3.textContent = thirdParagraph;
+articleButton.textContent = '\u25bc';
+
+//button 
+
+articleButton.addEventListener('click', (e) => {
+  console.log('clicked!');
+  article.classList.toggle('article-open');
+  article.classList.toggle('close');
+})
+
+return article; 
+
+}
+
+const Feed = data.forEach(data => {
+  articles.appendChild(createArticle(data.title,data.date,data.firstParagraph,data.secondParagraph,data.thirdParagraph));
+});
+
+
+
+  

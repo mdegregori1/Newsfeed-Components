@@ -33,3 +33,15 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+// function createMenu(Students,Faculty,Whats New, Tech Trends, Music, Log Out)
+
+
+// function createPanel(title, content) {
+//   const panel = document.createElement('div');
+//   const panelBar = document.createElement('div');
+//   const panelTitle = document.createElement('h3');
+//   const buttonPanel = document.createElement('div');
+//   const buttonOpen = document.createElement('button');
+//   const buttonClose = document.createElement('button');
+//   const panelContent = document.createElement('div');
+// }
