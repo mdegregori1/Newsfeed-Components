@@ -134,7 +134,7 @@ article.classList.add('article');
 articleDate.classList.add('date');
 articleButton.classList.add('expandButton');
 
-//structure
+//structure(s)
 
 article.appendChild(articleTitle);
 article.appendChild(articleDate);

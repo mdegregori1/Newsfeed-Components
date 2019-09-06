@@ -43,7 +43,7 @@ function createMenu (array){
   const mainMenu = document.createElement('div');
   const listItems = document.createElement('ul');
 
-  // class name(s)
+  // class name
 
   mainMenu.classList.add('menu');
 
